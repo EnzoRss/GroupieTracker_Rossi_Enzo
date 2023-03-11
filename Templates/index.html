@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <div class="logo"><img src="../assets/jikan.logo.png" ></div>
+    <div class="menu">
+        <a class="ctn_m pl" href="index.html">Accueil</a>
+        <ul class="navbar">
+            <li class="menu-cat">
+                <a href="#" class="ctn_m">Requête</a>
+                <ul class="navbar2">
+                    <li class="sous-menu">
+                        <a  href="#" >Simple </a>
+                    </li>
+                    <li class="sous-menu">
+                        <a href="#">Complète</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
 </header>
 <div class="pres">
     <div id="container">
@@ -20,7 +40,7 @@
             <h1>Jikan API</h1>
             <h3>Unofficial MyAnimeList API</h3>
             </div>
-            <p class= "txt_size clair">
+            <p class= "txt clair">
                 Jikan est une API qui scrap le site MyAnimeList
             </p>
         </div>
@@ -28,7 +48,7 @@
             <div class="titre">
                 <h1>MyAnimeList</h1>
             </div>
-            <p class="txt_size">
+            <p class="txt">
                 Site qui contient tout les infos sur les anime il permet aussi de crée
                 des liste d'anime vue avec un système de notation pour chaque anime ajouté a sa liste.
             </p>
@@ -37,7 +57,7 @@
             <div class="titre clair txt_size">
                 <h1>Comment fonctionne L'API</h1>
             </div>
-            <p class="clair txt_size">
+            <p class="clair txt">
                 L'API fonctionne avec du scrapping des infos du site MyAnimeList
             </p>
         </div>
@@ -45,7 +65,7 @@
             <div class="titre txt_size">
                 <h1>Pourquoi Jikan et pas MyAnimeList ?</h1>
             </div>
-            <p class=" txt_size">
+            <p class=" txt">
                 L'API de Jikan est plus simple elle  ne demande pas d'autentification , elle est aussi plus complète elle possède une partie REST qui ajoute beaucoup de paramètre en plus
             </p>
         </div>
@@ -56,11 +76,28 @@
     <img src="../assets/Bouton.png" class="bouton"  id ="g" alt="bouton">
 </div>
 <div class="param">
-    <div class="simple"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu ornare augue, sit amet auctor tortor. Proin aliquet facilisis erat, vel accumsan massa blandit eget. Aliquam erat volutpat. Ut malesuada urna at lectus dignissim, id bibendum est mollis. Morbi ultricies id justo sit amet sollicitudin. Pellentesque in laoreet lacus. Curabitur sit amet finibus ex.
+    <div class="use">
+        <h1 class="expl_t">Comment L'utiliser ?</h1><br>
+        <p class="expl"> Pour l'utiliser il y'a 2 facon la première et une général ou l'on rentre juste le nom de l'anime et cela nous retourne toute les info trouvrer en qui comporte ce nom
+             pour la 2ème on rentre un paramètre plus spécifique et cela nous retourne quelque des info plus concis et précise  </p><br>
+    </div>
+    <h1 class="expl_t"> La manière simple :</h1>
+    <div class="simple">
+        <div class="box-param">
+            https://api.jikan.moe/v4/anime?q=Nom de l'anime&sfw
+        </div>
+        <a  class="box-redir" href="#"> Requête simple <img src="../assets/redirect.png" height="40px" width="40px"></a>
+    </div>
+    <h1 class="expl_t"> La manière plus complète :</h1>
+    <p class="expl"> L'id et l'identifiant de l'anime que l'on veut avec ce paramètre on aura un seul reponse et pas plusieur qui comporte le même nom </p>
 
-        Phasellus vel quam ac velit imperdiet pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque maximus vel dui eu laoreet. Fusce ullamcorper dapibus arcu, et pretium erat placerat a. Fusce sodales cursus turpis et aliquet. Pellentesque lacinia, ante ut varius dapibus, est ligula scelerisque massa, vitae eleifend ipsum neque ac sapien. Duis aliquam at ex eu varius. Proin diam dolor, iaculis iaculis nisl nec, blandit sodales tellus. Aliquam nec dignissim mauris. Aenean pharetra nisi at orci feugiat ornare. Vestibulum aliquet neque non nibh lacinia, eget gravida ex suscipit. Sed eleifend velit feugiat eros tincidunt maximus vitae non lacus.
+    <div class="simple">
+        <div class="box-param">
+            https://api.jikan.moe/v4/anime/{id}+ /paramètre spécifique
+        </div>
+        <a  class="box-redir" href="#"> Requête plus complète <img src="../assets/redirect.png" height="40px" width="40px"></a>
+    </div>
 
-        Mauris nec odio congue, mattis lacus et, mattis nisi. Nam iaculis, eros iaculis egestas varius, velit sapien laoreet felis, ac sollicitudin elit quam sollicitudin neque. Maecenas porta porttitor maximus. Donec ut dictum lorem, vitae facilisis metus. Duis vestibulum, turpis a scelerisque rutrum, purus enim hendrerit neque, in pulvinar felis eros sed odio. Morbi eleifend, nisi vitae imperdiet eleifend, libero magna placerat sapien, in venenatis felis massa non neque. In lacinia tristique congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultricies tortor vitae libero posuere commodo. Nulla gravida viverra lacus, id feugiat ante dignissim sit amet. Sed faucibus viverra placerat. Aenean egestas sodales fringilla. Mauris elit massa, scelerisque rhoncus tellus eget, posuere fringilla nibh. </div>
 </div>
 
 
@@ -71,9 +108,9 @@
 
     <hr style="height:2px;border-width:0;color:gray;background-color:white">
     <ul class="list-inline">
-      <li class="list-inline-item"><a href="index.html">Accueil</a></li>
+      <li class="list-inline-item"><a href="#">Accueil</a></li>
     </ul>
-    <p class="copyright">Company Name</p>
+    <p class="copyright">Jikan</p>
   </div>
 </footer>
 <script src="../script/slider.js"></script>
